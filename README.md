@@ -1,8 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Website
 
-## Getting Started
+A modern, responsive portfolio website built with Next.js 13, showcasing my projects, skills, and experience as a web developer.
 
-First, run the development server:
+![Image](https://github.com/user-attachments/assets/dc9a447b-5a56-42f1-86f1-8d215a05abf5)
+
+![Image](https://github.com/user-attachments/assets/d0bfafa2-d79e-4309-9e10-124c82518e42)
+
+## 🚀 Features
+
+- **Modern UI/UX**: Clean and professional design with smooth animations
+- **Responsive Design**: Fully responsive layout that works on all devices
+- **Interactive Elements**:
+  - Scroll-based progress bar
+  - Smooth page transitions
+  - Animated components using Framer Motion
+- **Project Showcase**: Detailed display of projects with live demos and source code
+- **Contact Form**: Integrated contact form for easy communication
+- **Dark Mode**: Elegant dark theme with custom color scheme
+
+## 🛠️ Technologies Used
+
+- **Frontend Framework**: Next.js 13 (App Router)
+- **Styling**: Tailwind CSS
+- **Animation**: Framer Motion
+- **UI Components**: ShadCN UI
+- **Icons**: Lucide React
+- **Form Handling**: EmailJS
+- **Deployment**: Vercel
+
+## 📦 Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/RajTangadi/portfolio.git
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+3. Create a `.env.local` file in the root directory and add your EmailJS credentials:
+
+```env
+NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
+NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
+```
+
+For detailed instructions on setting up EmailJS and obtaining your credentials, please refer to [comprehensive EmailJS integration guide](https://medium.com/@alagappan.dev/using-emailjs-with-react-to-build-a-contact-form-for-your-website-5040966a814).
+
+4. Run the development server:
 
 ```bash
 npm run dev
@@ -10,27 +64,44 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Customization
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Update your personal information in the respective components
+- Modify the color scheme in `tailwind.config.js`
+- Add or remove projects in the projects data
+- Customize animations in the components
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📱 Pages
 
-## Learn More
+- **Home**: Introduction and overview
+- **About**: Personal information and skills
+- **Projects**: Showcase of completed projects
+- **Contact**: Contact form for communication
 
-To learn more about Next.js, take a look at the following resources:
+## 🔧 Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+src/
+├── app/                    # Next.js app router pages
+├── components/            # Reusable components
+│   ├── ui/               # UI components
+│   ├── Navbar.tsx        # Navigation component
+│   ├── ProgressBar.tsx   # Scroll progress indicator
+│   └── ...
+├── public/               # Static assets
+└── styles/              # Global styles
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚀 Deployment
 
-## Deploy on Vercel
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🤝 Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+---
+
+Made with ❤️ by Raj Tangadi
