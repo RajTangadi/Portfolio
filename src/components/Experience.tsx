@@ -2,7 +2,15 @@
 
 import { motion } from "framer-motion"
 
-const experiences = [
+interface Experience {
+  company: string;
+  period: string;
+  role: string;
+  location: string;
+  achievements: string[];
+}
+
+const experiences: Experience[] = [
   {
     company: "Binarystitch Softwares LLP",
     period: "Aug 2024– April 2025",
@@ -18,6 +26,10 @@ const experiences = [
 ]
 
 const Experience = () => {
+  if (!experiences.length) {
+    return null;
+  }
+
   return (
     <section className="px-4 sm:px-4 bg-[#1F2937] ">
       <div className="max-w-3xl mx-auto">
@@ -77,4 +89,4 @@ const Experience = () => {
   )
 }
 
-export default Experience 
+export default Experience
