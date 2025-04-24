@@ -73,7 +73,7 @@ const Hero = () => {
             asChild 
             className="px-6 py-2 text-base sm:text-lg bg-[#6366F1] hover:bg-[#F472B6] text-[#FFFFFF] transition-colors duration-300"
           >
-            <a href="#projects">🚀 View Projects</a>
+            <a href="/projects">🚀 View Projects</a>
           </Button>
           <Button
             asChild
