@@ -56,7 +56,7 @@ export default function ContactForm() {
       });
     } catch (error) {
       console.error('Error sending email:', error);
-      toast.error('Failed to send message. Please try again.');
+      // toast.error('Failed to send message. Please try again.');
     } finally {
       setIsSubmitting(false);
     }
