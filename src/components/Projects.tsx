@@ -40,7 +40,7 @@ const projects = [
     image: "/projects/cryptocurrency.png",
     description: "An IMDb Clone project is a web application built to replicate the core functionalities of IMDb, such as browsing movies, TV shows, and celebrities. It typically allows users to search for titles, view detailed information like ratings, reviews, cast, and trailers",
     technologies: ["React js"],
-    liveUrl: "https://github.com/RajTangadi/Crypto-Price-Tracking-App",
+    liveUrl: "https://crypto-hunter1.netlify.app",
     githubUrl: "https://github.com/RajTangadi/Crypto-Price-Tracking-App"
   }
 ]
