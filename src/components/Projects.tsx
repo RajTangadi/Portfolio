@@ -23,6 +23,7 @@ const projects = [
     technologies: ["React", "Tailwind CSS","Node.js", "Express", "MongoDB"],
     liveUrl: "https://mern-estate-2-g6uj.onrender.com",
     githubUrl: "https://github.com/RajTangadi/mern-estate"
+    
   },
   {
     id: 3,
