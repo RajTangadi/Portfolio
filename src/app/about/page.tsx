@@ -2,12 +2,6 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Metadata } from 'next';
-
-const metadata: Metadata = {
-  title: 'About Me | Raj Tangadi',
-  description: 'Learn more about Raj Tangadi, a passionate web developer from Mumbai.',
-};
 
 const AboutPage = () => {
   const containerVariants = {
