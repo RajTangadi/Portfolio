@@ -4,7 +4,8 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { BsGithub } from 'react-icons/bs';
-
+import { useState } from 'react';
+import { Search } from 'lucide-react';
 
 const projects = [
   {
@@ -21,7 +22,7 @@ const projects = [
     title: "Real Estate App",
     image: "/projects/RealEstate.png",
     description: "A Real Estate App is dynamic platform for buying, selling, or renting properties",
-    technologies: ["React", "Tailwind CSS","Node.js", "Express", "MongoDB"],
+    technologies: ["React", "Tailwind CSS","Node js", "Express", "MongoDB"],
     liveUrl: "https://mern-estate-2-g6uj.onrender.com",
     githubUrl: "https://github.com/RajTangadi/mern-estate"
   },
@@ -30,7 +31,7 @@ const projects = [
     title: "Movie App",
     image: "/projects/IMDB-clone.png",
     description: "An IMDb Clone project is a web application built to replicate the core functionalities of IMDb, such as browsing movies, TV shows, and celebrities. It typically allows users to search for titles, view detailed information like ratings, reviews, cast, and trailers",
-    technologies: ["Next.js", "Clerk", "Tailwind CSS", "Ingest"],
+    technologies: ["Next js", "Clerk", "Tailwind CSS", "Ingest"],
     liveUrl: "https://movie-app-rosy-sigma.vercel.app",
     githubUrl: "https://github.com/RajTangadi/movie-app"
   },
@@ -46,6 +47,18 @@ const projects = [
 ];
 
 const ProjectsPage = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const filteredProjects = projects.filter(project => 
+    project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    project.technologies.some(tech => 
+      tech.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+  );
+
+  console.log(filteredProjects);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -79,7 +92,21 @@ const ProjectsPage = () => {
           <h1 className="text-4xl md:text-5xl font-bold text-[#22D3EE] mb-4">
             My Projects
           </h1>
-          <div className="w-54 h-1 bg-[#22D3EE] mx-auto rounded-full" />
+          <div className="w-54 h-1 bg-[#22D3EE] mx-auto rounded-full mb-8" />
+          
+          {/* Search Input with Icon */}
+          <div className="max-w-md mx-auto relative">
+            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <Search className="h-5 w-5 text-gray-400" />
+            </div>
+            <input
+              type="text"
+              placeholder="Search projects by title, description, or technology..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full pl-10 px-4 py-2 rounded-lg bg-[#374151] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#22D3EE]"
+            />
+          </div>
         </motion.div>
 
         <motion.div
@@ -88,7 +115,7 @@ const ProjectsPage = () => {
           initial="hidden"
           animate="visible"
         >
-          {projects.map((project) => (
+          {filteredProjects.map((project) => (
             <motion.div
               key={project.id}
               className="bg-[#374151] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
