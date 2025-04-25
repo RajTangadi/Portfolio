@@ -118,7 +118,7 @@ const ProjectsPage = () => {
           {filteredProjects.map((project) => (
             <motion.div
               key={project.id}
-              className="bg-[#374151] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="bg-[#374151] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full"
               variants={itemVariants}
               whileHover={{ y: -5 }}
             >
@@ -131,7 +131,7 @@ const ProjectsPage = () => {
                 />
               </div>
               
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-semibold text-[#FFFFFF] mb-3">{project.title}</h3>
                 
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -145,9 +145,9 @@ const ProjectsPage = () => {
                   ))}
                 </div>
 
-                <p className="text-[#9CA3AF] mb-6">{project.description}</p>
+                <p className="text-[#9CA3AF] mb-6 flex-grow">{project.description}</p>
 
-                <div className="flex gap-4">
+                <div className="flex gap-4 mt-auto pt-4 border-t border-gray-600">
                   <Link
                     href={project.liveUrl}
                     target="_blank"
