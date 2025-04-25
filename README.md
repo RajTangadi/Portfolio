@@ -1,6 +1,6 @@
 # Portfolio Website
 
-A modern, responsive portfolio website built with Next.js 13, showcasing my projects, skills, and experience as a web developer.
+A modern, responsive portfolio website built with Next.js 15, showcasing my projects, skills, and experience as a web developer.
 
 ![Image](https://github.com/user-attachments/assets/dc9a447b-5a56-42f1-86f1-8d215a05abf5)
 
@@ -20,7 +20,7 @@ A modern, responsive portfolio website built with Next.js 13, showcasing my proj
 
 ## 🛠️ Technologies Used
 
-- **Frontend Framework**: Next.js 13 (App Router)
+- **Frontend Framework**: Next.js 15 (App Router)
 - **Styling**: Tailwind CSS
 - **Animation**: Framer Motion
 - **UI Components**: ShadCN UI
