@@ -96,7 +96,7 @@ const Projects = () => {
 
                 <p className="text-[#9CA3AF] mb-6 flex-grow">{project.description}</p>
 
-                <div className="flex gap-4 mt-auto pt-4 border-t border-gray-600">
+                <div className="flex gap-4 mt-auto pt-4 border-t justify-between border-gray-600">
                   <Link
                     href={project.liveUrl}
                     target="_blank"

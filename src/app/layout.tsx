@@ -7,7 +7,10 @@ import ProgressBar from "@/components/ProgressBar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
+  title: {
+    default:"Portfolio",
+    template: "%s | Portfolio",
+  },
   description: "Personal Portfolio Website",
 };
 

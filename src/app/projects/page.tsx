@@ -57,7 +57,6 @@ const ProjectsPage = () => {
     )
   );
 
-  console.log(filteredProjects);
 
   const containerVariants = {
     hidden: { opacity: 0 },
